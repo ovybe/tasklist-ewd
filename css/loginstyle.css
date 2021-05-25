@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'KoHo';
+    src: url('../fonts/KoHo-Regular.eot');
+    src: url('../fonts/KoHo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KoHo-Regular.woff2') format('woff2'),
+        url('../fonts/KoHo-Regular.woff') format('woff'),
+        url('../fonts/KoHo-Regular.ttf') format('truetype'),
+        url('../fonts/KoHo-Regular.svg#KoHo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /*https://fonts.google.com/specimen/KoHo*/
+}
+body{
+  background: #1D1B26;
+  font-family:'KoHo';
+  font-size:16px;
+  text-align:center;
+}
+html,body{
+  margin: 0 auto;
+}
+.headerm {
+  box-sizing:border-box;
+  max-width:350px;
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: #e5e5e5;
+  display:block;
+}
+.tooltip,.emailtip,.others {
+  position: relative;
+  display:table-row;
+  text-align:center;
+}
+label{
+  display:block;
+  text-align:center;
+}
+input{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+.headerm {
+    width: 100%;
+    font-size:1rem;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+.headerm {
+    width: 100%;
+    font-size:1rem;
+  }
+}
+@media only screen and (min-width:2000px) {
+  /* For TV: */
+  body {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,111 @@
+@font-face {
+    font-family: 'KoHo';
+    src: url('../fonts/KoHo-Regular.eot');
+    src: url('../fonts/KoHo-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/KoHo-Regular.woff2') format('woff2'),
+        url('../fonts/KoHo-Regular.woff') format('woff'),
+        url('../fonts/KoHo-Regular.ttf') format('truetype'),
+        url('../fonts/KoHo-Regular.svg#KoHo-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    /*https://fonts.google.com/specimen/KoHo*/
+}
+body{
+  background: #1D1B26;
+  font-family:'KoHo';
+  font-size:16px;
+}
+html,body{
+  margin: 0 auto;
+}
+#register {
+  box-sizing:border-box;
+  max-width: 350px;
+  width:30%;
+  margin: auto;
+  padding: 10px;
+  border-radius: 5px;
+  background: #e5e5e5;
+  height:100%;
+  display:block;
+}
+
+
+.tooltip,.emailtip,.others {
+  position: relative;
+  display:table-row;
+  text-align:center;
+}
+label{
+  display:block;
+  text-align:center;
+}
+input{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.tooltip .tooltiptext,.tooltiptextp {
+  display: none;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: 150%;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.tooltip .tooltiptext::after,.tooltiptextp::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+.tooltip:onclick .tooltiptext,.tooltiptextp {
+  visibility: hidden;
+}
+
+@media only screen and (max-width:800px) {
+  /* For tablets: */
+#register {
+    width:100%;
+    font-size:1rem;
+  }
+}
+@media only screen and (max-width:500px) {
+  /* For mobile phones: */
+  #register {
+    width: 100%;
+    font-size:1rem;
+  }
+}
+@media only screen and (min-width:2000px) {
+  /* For TV: */
+  body {
+    font-size: 16px;
+  }
+  .formz{
+    position: relative;
+    padding-bottom: 56.25%;
+    font-size:1.5rem;
+  }
+  #subb{
+    display:inline-block;
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    transform: scale(1.5);
+  }
+}
