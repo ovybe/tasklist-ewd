@@ -1,6 +1,50 @@
+scheduler.config.readonly = true;
+scheduler.init('scheduler_here', new Date(), "week");
+$(function() {
+  $('input[name="datetimes"]').daterangepicker({
+    timePicker: true,
+    startDate: moment().startOf('hour'),
+    endDate: moment().startOf('hour').add(32, 'hour'),
+    locale: {
+      format: 'YYYY/MM/DD HH:mm:ss'
+    }
+  });
+});
+function get_tasks(){ // FINISHED
+	// userId is a const in index.php
+	//console.log('userid:'+userId);
+	$.ajax({
+				url: "php/gettasks.php",
+				type: "POST",
+				data: {
+					user_id: userId,
+				},
+				cache: false,
+				success: function(dataResult){
+          //$("#theul").find(".ifemptyt").fadeOut(0);
+					var dataResult = JSON.parse(dataResult);
+          if (!dataResult.hasOwnProperty('error')){
+            //trebuie sa adaug in lista
+            // REMINDER TO MODIFY IN CASE OF CHANGES
+						//console.log(dataResult);
+						$.each(dataResult,function(key,val){
+							scheduler.addEvent({id:val.task_id, text:val.task_string, start_date:val.task_start_date, end_date:val.task_end_date});
+						});
+						//alert("Got past jquery each...");
+          }
+          else {
+             // TBC
+						 //scheduler.addEvent({id:dataResult.task_id, text:dataResult.task, start_date:startdate+" 00:00", end_date:enddate+" 23:59"});
+						 //$("#catul").val(taskcat).trigger('change');
+						 alert("There has been an error getting the tasks for the Calendar. Check dataResult");
+          }
 
+				}
+			});
+}
 $(document).ready(function(){
-    console.log('hello');
+    //console.log('hello');
+		get_tasks();
     $('#catul').on('change', function() {
       //alert("I happened");
       var category_id=$("#catul option:selected").data('id');
@@ -62,8 +106,8 @@ $(document).ready(function(){
                   }
                   else {
                     alert("There has been an error"); // TBC
-                    alert(dataResult.error);
-                    alert(dataResult.sql);
+                    console.log(dataResult.error);
+                    console.log(dataResult.sql);
                   }
                 }
             });
@@ -84,13 +128,20 @@ function addTask(){
   var task=$("#myInput").val();
   var taskcat = $('#catul option:selected').val();
   var catid=$('#myInputaddC option:selected').data('id');
-  //console.log(taskcat);
+  var datetime=$('#Datepick1').val().split(" - ");
+  //console.log(datetime);
+	var startdate=datetime[0];
+	var enddate=datetime[1];
+  //console.log(startdate);
+	//console.log(enddate);
   $.ajax({
 				url: "php/addtask.php",
 				type: "POST",
 				data: {
 					task_string: task,
           category_id: catid,
+					start_date: startdate,
+					end_date: enddate,
 				},
 				cache: false,
 				success: function(dataResult){
@@ -99,8 +150,10 @@ function addTask(){
           if (dataResult.error==''){
             //trebuie sa adaug in lista
             // REMINDER TO MODIFY IN CASE OF CHANGES
+						//console.log(dataResult);
             $('#theul').append('<li class="listselected" data-id='+dataResult.task_id+'>'+'<input type="checkbox" /> '+'<label>'+task+'</label>'+'<input type="text"></input>'+'<button class="editb" onclick="editTask(this)">Edit</button>'+'<button class="delb" onclick="deleteTask(this)">Delete</button></li>');
-            $("#catul").val(taskcat).trigger('change');
+						scheduler.addEvent({id:dataResult.task_id, text:task, start_date:startdate, end_date:enddate});
+						$("#catul").val(taskcat).trigger('change');
           }
           else {
             alert("There has been an error..."); // TBC
@@ -236,7 +289,7 @@ function changeCatgen(id,idlist){
           }
           else {
             setTimeout(function(){ alert("There has been an error..."); }, 2000);
-            console.log(dataResult.sql); // TBC
+            //console.log(dataResult.sql); // TBC
           }
         }
       });
@@ -269,6 +322,8 @@ var taskid=li.data('id');
               if (dataResult.error==''){
                 //trebuie sa adaug in lista
                 label.text(taskval);
+                scheduler.getEvent(taskid).text = taskval;
+                scheduler.updateEvent(taskid);
               }
               else {
                 alert("There has been an error..."); // TBC
@@ -344,6 +399,8 @@ function deleteTask(el){
                               $(li).parent().find(".ifemptyt").fadeOut(0);
                           } else $(li).parent().find(".ifemptyt").fadeIn(0);
           li.remove();
+					scheduler.deleteEvent(taskid);
+					//console.log(taskid);
           }
           else {
             alert("There has been an error..."); // TBC
@@ -380,6 +437,10 @@ function DeleteGeneral(id){
             var dataResult = JSON.parse(dataResult);
             if (dataResult.error==''){
               //trebuie sa adaug in lista
+							selectedid.forEach(element =>{
+								//console.log("Id:"+element);
+								scheduler.deleteEvent(element);
+							});
               $.each(selectedli,function(){
                 $(this).remove();
               });

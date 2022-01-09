@@ -16,9 +16,18 @@
   max-width: 50%;
   margin: auto;
   padding: 10px;
-  border-radius: 5px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
   background: #e5e5e5;
   height:100%;
+}
+#Datepick1{
+  width:60%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding:0.45rem;
 }
 #myInputC, #myInput,#editforcat{
   width: 50%;
@@ -29,8 +38,11 @@
   border-radius: 5px;
   padding:0.45rem;
 }
+#myInput{
+  width:97.5%;
+}
 body{
-  background: #1D1B26;
+  background-color: #1D1B26;
   font-family:'KoHo';
   font-size:16px;
 }
@@ -124,6 +136,8 @@ ul li.editMode label {
 #catul {
   display: block;
   font-family: 'KoHo';
+  font-size:120%;
+  font-size-adjust:auto;
   font-weight: 700;
   color: #444;
   line-height: 1.3;
@@ -168,6 +182,8 @@ ul li.editMode label {
 #myInputaddC,#changecat,#changecatdone {
   display: inline-block;
   font-family: 'KoHo';
+  font-size:110%;
+  font-size-adjust:auto;
   font-weight: 700;
   color: #444;
   line-height: 1.3;
@@ -187,11 +203,11 @@ ul li.editMode label {
   background-image: linear-gradient(to bottom, #ffffff 35%,#e5e5e5 100%);
 }
 /* Hover style */
-#myInputaddC,#changecat,#changecatdone:hover {
+#myInputaddC:hover,#changecat:hover,#changecatdone:hover {
   border-color: #888;
 }
 /* Focus style */
-#myInputaddC,#changecat,#changecatdone:focus {
+#myInputaddC:focus,#changecat:focus,#changecatdone:focus {
   border-color: #aaa;
   box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
   box-shadow: 0 0 0 3px -moz-mac-focusring;
@@ -200,7 +216,7 @@ ul li.editMode label {
 }
 
 /* Set options to normal weight */
-#myInputaddC,#changecat,#changecatdone option {
+#myInputaddC option,#changecat option,#changecatdone option {
   font-weight:normal;
 }
 @media only screen and (max-width:800px) {
@@ -282,4 +298,15 @@ ul li input[type="checkbox"] {
   -webkit-transform: scale(1.5); /* Safari and Chrome */
   -o-transform: scale(1.5); /* Opera */
   transform: scale(1.5);
+}
+
+div#ec{
+  background-color: #e5e5e5;
+  border: 0 none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.ec-events{
+  width: 100%;
 }

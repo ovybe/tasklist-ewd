@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+  font-family: Roboto;
+  font-style: normal;
+}
+img {
+  padding:0.5rem;
+}
+/* The sidebar menu */
+.sidenav {
+ height: 100%; /* Full-height: remove this if you want "auto" height */
+ width: 15vw; /* Set the width of the sidebar */
+ position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+ z-index: 1; /* Stay on top */
+ top: 0; /* Stay at the top */
+ left: 0;
+ background-color: #0288d1; /* Black */
+ overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* The navigation menu links */
+.sidenav a {
+ padding: 6px 8px 6px 16px;
+ text-decoration: none;
+ font-size: 25px;
+ color: #fff;
+ display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+ color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+ margin-left: 15vw; /* Same as the width of the sidebar */
+ padding-top:5vh;
+}
+.main > p{
+position: relative;
+justify-content: center;
+display: grid;
+font-size: 18px;
+}
+
+#weekp{
+  position: relative;
+  justify-content: center;
+  display: grid;
+  font-size: 18px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+ .sidenav {padding-top: 15px;}
+ .sidenav a {font-size: 18px;}
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .sidenav{
+    width:30vw;
+    font-size:0.5rem;
+  }
+  body{
+    font-size:1rem;
+  }
+  .main{
+    font-size:1rem;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .sidenav{
+    width:30vw;
+    font-size:2rem;
+  }
+  .sidenav a{
+    width:20vw;
+    font-size:4rem;
+  }
+  body{
+    font-size:4rem;
+  }
+  .main{
+    font-size:4rem;
+  }
+  p{
+    font-size:4rem !important;
+    padding-left:2vw;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (max-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 1200px) {
+
+}

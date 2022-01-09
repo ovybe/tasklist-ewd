@@ -1,0 +1,45 @@
+:root{
+--border-color: black:
+--background-color: gray;
+--text-color: black;
+}
+* {
+  box-sizing: border-box;
+}
+.draggable-el {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 15px;
+    flex:1;
+}
+
+.draggable-list,.draggable-list2{
+  border: 1px solid var(--border-color);
+  padding:0;
+  list-style-type: none;
+}
+
+.draggable-list li,.draggable-list2 li{
+  background-color:gray;
+  display:flex;
+  flex:1;
+}
+
+.draggable-list li:not(:last-of-type),.draggable-list2 li:not(:last-of-type){
+  border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number,.draggable-list2 .number{
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.draggable-list li.over .draggable-el,.draggable-list2 li.over .draggable-el{
+  background-color:white;
+}
+.draggable-list .task-name,.draggable-list2 .task-name{
+
+}

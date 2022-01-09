@@ -1,0 +1,128 @@
+.lists,.listsmonth {
+padding-left:30vw;
+display:flex;
+}
+.lists label,.listsmonth label{
+  position: relative;
+  justify-content: center;
+  display: grid;
+  font-size: 18px;
+}
+.lists ul,.listsmonth ul {
+  border: 1px solid #dbf2ff;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+  list-style: none;
+}
+.lists .listdiv,.listsmonth .listdiv{
+  flex: 33.33%;
+  padding: 5px;
+  background-color: white;
+  margin: 5px;
+  list-style: none;
+}
+.listdiv label{
+  display:block;
+  text-align:center;
+}
+.lists li,.listsmonth li {
+display:flex;
+padding:5px;
+margin:5px;
+background-color:#fff;
+justify-content: space-between;
+border: 1px solid #dbdbdb;
+}
+.lists li span,.listsmonth li span{
+  padding:0.5rem;
+}
+
+.lists button,.listsmonth button {
+  align-items: center;
+  background-color: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  cursor: pointer;
+  display: inline-flex;
+  background:none;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin: 0;
+  min-height: 1rem;
+  padding: calc(.275rem - 1px) calc(.875rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.lists button:hover,
+.lists button:focus,.listsmonth button:hover,.listsmonth button:focus {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.lists button:hover,.listsmonth button:hover {
+  transform: translateY(-1px);
+  background-color: #FFFFFF;
+}
+
+.lists button:active,.listsmonth button:active {
+  background-color: #F0F0F1;
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  color: rgba(0, 0, 0, 0.65);
+  transform: translateY(0);
+}
+.connectedSortable.empty:before{
+      content: "Drop a task here.";
+    display: block;
+    background: #f7f7f7;
+    margin: 5px;
+    padding: 5px 7px;
+}
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .lists,.listsmonth{
+    display:block;
+    width:fit-content;
+    padding-left:15vw !important;
+  }
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 768px) {
+  .lists,.listsmonth{
+    display:block;
+    width:fit-content;
+    padding-left:20vw !important;
+    font-size:3rem;
+    text-align:center;
+  }
+  .listdiv label{
+    font-size:4rem;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}

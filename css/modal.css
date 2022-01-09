@@ -1,0 +1,119 @@
+/* The Modal (background) */
+.modal,.modali {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content,.modali-content {
+ background-color: #fefefe;
+ margin: 15% auto; /* 15% from the top and centered */
+ padding: 20px;
+ border-radius:5px;
+ width: 40%; /* Could be more or less, depending on screen size */
+ box-sizing:border-box;
+}
+.emailform, .taskform,.edittaskform,.teamform{
+  display:grid;
+  justify-content: center;
+  box-sizing: border-box;
+  text-align:center;
+}
+.teamform #tecolor{
+  display:block;
+  margin:auto;
+}
+.emailform ul{
+  list-style: none;
+  justify-content: left;
+  display: flex;
+  background-color: #0288d1;
+  padding: 5px;
+  margin: 5px;
+  color: white;
+}
+.edittaskform #DatepickEd,.taskform #Datepick1{
+  width:20vw;
+}
+.edittaskform #DatepickEd,.taskform #Datepick1{
+  width:20vw;
+}
+.emailtip{
+  text-align:center;
+  display:grid;
+}
+/* The Close Button */
+.close,.closei,.closeTED {
+ color: #aaa;
+ float: right;
+ font-size: 28px;
+ font-weight: bold;
+}
+
+.close:hover,
+.close:focus,.closei:hover,.closei:focus,.closeTED:hover,.closeTED:focus {
+ color: black;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+/* CSS */
+.modal button,.modali button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  margin: 5px 5px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+.modal button:hover,.modali button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.modal button:focus,.modali button:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+#eTable {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#eTable td, #eTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#eTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#eTable tr:hover {background-color: #ddd;}
+
+#eTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0288d1;
+  color: white;
+}

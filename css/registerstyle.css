@@ -1,19 +1,14 @@
 @font-face {
-    font-family: 'KoHo';
-    src: url('../fonts/KoHo-Regular.eot');
-    src: url('../fonts/KoHo-Regular.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/KoHo-Regular.woff2') format('woff2'),
-        url('../fonts/KoHo-Regular.woff') format('woff'),
-        url('../fonts/KoHo-Regular.ttf') format('truetype'),
-        url('../fonts/KoHo-Regular.svg#KoHo-Regular') format('svg');
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/Roboto/Roboto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-    /*https://fonts.google.com/specimen/KoHo*/
 }
 body{
-  background: #1D1B26;
-  font-family:'KoHo';
+  background: #0288d1;
+  font-family:'Roboto';
   font-size:16px;
 }
 html,body{

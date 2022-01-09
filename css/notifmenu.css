@@ -1,0 +1,80 @@
+#notifdiv{
+  overflow: scroll;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 24vw;
+  min-height: 10vh;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 4;
+  left: -10vw;
+  top: 5vh;
+}
+#userdiv{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 4;
+  top:5vh;
+}
+#userdiv a{
+color:black;
+}
+.notification {
+  color: white;
+  text-decoration: none;
+  padding: 15px 26px;
+  position: relative;
+  display: inline-block;
+  justify-content:center;
+  border-radius: 2px;
+}
+.notification a{
+    font-size:17px;
+}
+#notifdiv:hover {
+  background: gray;
+}
+.notification:hover {
+  background: red;
+}
+/* .notification:hover #notifdiv {
+  display:block;
+} */
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+}
+
+.notif_padding {
+  float:right;
+  padding-right:6vw;
+}
+#notifdiv .invite{
+}
+.invite .acceptinvb{
+  border:0.1px solid black;
+  width: 20px;
+  height: 20px;
+  padding:0;
+  background-color:#5fb55d;
+}
+.invite .refuseinvb{
+  border:0.1px solid black;
+  width: 20px;
+  height: 20px;
+  padding:0;
+  background-color:#ff6060;
+}
+.invite .clearinvb{
+  background-color:inherit;
+}

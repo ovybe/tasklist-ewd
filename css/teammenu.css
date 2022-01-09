@@ -1,0 +1,124 @@
+.main {
+    /*width: 500px;*/
+    /* border: 1px solid black; */
+    overflow: hidden; /* will contain if #first is longer than #second */
+}
+.breadcrumbs a{
+    /*width: 500px;*/
+    /* border: 1px solid black; */
+    overflow: hidden; /* will contain if #first is longer than #second */
+    font-size:12px;
+    padding: 5px;
+}
+#tformdiv {
+    /*width: 30%;*/
+    float:right; /* add this */
+    /*border: 1px solid red;*/
+}
+.border_table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.border_table td, .border_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+.border_table i{
+  padding:0.5rem;
+}
+.border_table tr:nth-child(even){background-color: #f2f2f2;}
+
+.border_table tr:hover {background-color: #ddd;}
+
+.border_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0288d1;
+  color: white;
+}
+
+/* CSS */
+.toolbar_button,.table_button {
+  background-color: #f8f9fa;
+  border: 1px solid #f8f9fa;
+  border-radius: 4px;
+  color: #3c4043;
+  cursor: pointer;
+  font-family: arial,sans-serif;
+  font-size: 17px;
+  height: 36px;
+  line-height: 27px;
+  min-width: 54px;
+  padding: 0 16px;
+  margin: 5px 5px;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: pre;
+}
+.toolbar_button:hover,.table_button:hover {
+  border-color: #dadce0;
+  box-shadow: rgba(0, 0, 0, .1) 0 1px 1px;
+  color: #202124;
+}
+
+.toolbar_button:focus,.table_button:focus {
+  border-color: #4285f4;
+  outline: none;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: center;
+}
+.toolbar div {
+    margin: 0 2px;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+#lsinfo {
+  margin:5%;
+}
+#iuserlist {
+  margin:5%;
+}
+.box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  border: 1px solid black;
+  clear: both;
+}
+.colt{
+  padding:0;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -15,8 +15,8 @@ $result=array();
 else $_SESSION['userex']=0;
 $sql='INSERT INTO `users`(`name`, `password`, `email`) VALUES ("'.$user.'","'.md5($pass).'","'.$email.'")';
 //print_r($sql);
-if (mysqli_query($conn, $sql)) {
-    $_SESSION['reg']=1;
+if (mysqli_query($conn,$sql)) {
+    $_SESSION['treg']=1;
     $_SESSION['seen']=0;
     $result['error']='';
 	}
