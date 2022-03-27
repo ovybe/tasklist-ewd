@@ -10,10 +10,3 @@ To access the site, you must create and log in with an account, which is also st
 - You will need a server to host it on.
 
 I used XAMPP Apache and MySQL to be able to host the entire website. (The contents of the .ZIP were placed in a folder inside the htdocs folder, which is located wherever you installed XAMPP).
-## How it should look
-##### Login
-![Login](referat/login.PNG?raw=true "Login")
-##### Register
-![Register](referat/register.PNG?raw=true "Register")
-##### The actual tasklist
-![tasklist](referat/site.PNG?raw=true "Tasklist")
